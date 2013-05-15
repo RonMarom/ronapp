@@ -1,4 +1,7 @@
-<div class="hero-unit">		
+<% if user_signed_in? %>
+	<h1>You're logged in!</h1>
+<%else%>
+	<div class="hero-unit">		
 		<h1>Ron's application!</h1>
 		<p>
 			You've found the home page for the 
@@ -6,7 +9,7 @@
 			website.
 		</p>
 		<p>
-			<%= link_to "Sign up now!", "#", class: "btn btn-large btn-primary" %>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 		</p>
-</div>
-
+	</div>
+<%end%>
