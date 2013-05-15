@@ -1,8 +1,9 @@
  <tr>
-    <td><%= pin.description %></td>
+ <td>a</td>
+    <td><%= @the_pin.description %></td>
     <td><%= link_to 'Show', pin %></td>
-	<% if current_user == pin.user %>
-		<td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-		<td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% if current_user == @the_pin.user %>
+		<td><%= link_to 'Edit', edit_pin_path(@the_pin) %></td>
+		<td><%= link_to 'Destroy', @the_pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	<% end %>
   </tr>

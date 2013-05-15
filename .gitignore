@@ -15,3 +15,5 @@
 /tmp
 doc/
 *.swp
+
+/public/system
